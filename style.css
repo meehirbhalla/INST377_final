@@ -106,10 +106,9 @@ form {
   */
 
 .box {
-  background-color: rgba(239, 239, 239, 0.4);
+  background-color: rgba(175, 215, 74, 0.7);
   border: 2px dashed;
   border-radius: 4px;
-
   width: fit-content;
   height: fit-content;
   padding: 1.5rem;
@@ -117,7 +116,7 @@ form {
 }
 
 .left_section {
-  background-color: rgba(0, 139, 139, 0.8);
+  background-color: rgba(229, 229, 229, 0.871);
   flex: 0 1 auto;
   margin: 1rem;
   padding: 1.5rem;
@@ -125,21 +124,45 @@ form {
 }
 
 .right_section {
-  background-color: rgba(255, 224, 138, 0.7);
+  background-color: rgba(229, 229, 229, 0.871);
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;
 }
 
+.viz {
+    width: 48%;
+    height: 200px;
+    margin: 4px;
+    border: 1px solid rgb(122, 122, 122);
+    float: left;
+    border-radius: 5px;
+    background-color: rgba(175, 237, 50, 0.416);
+}
+
+.open_seats {
+    width: fit-content;
+    height: 25px;
+    margin: 4px;
+    float: left;
+}
+
+.empty {
+    background-color: rgba(175, 215, 74, 0.7);
+}
+
+.half {
+    background-color: rgb(255, 132, 0, 0.7);
+}
+
+.full {
+    background-color: rgb(255, 0, 0, 0.7);
+}
+
 .footer {
   flex-shrink: 0;
   padding: 1rem;
-  background-color: rgba(0, 139, 139, 0.8);
+  background-color: rgba(66, 66, 66, 0.8);
   font-size: 1.2rem;
   font-weight: 600;
-}
-
-.footer a {
-  color: rgba(255, 224, 138, 1);
-  text-decoration: underline;
 }
