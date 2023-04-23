@@ -25,12 +25,20 @@ function initChart(chart) {
   );
 }
 
+async function getData() {
+  const url = '';
+  const data = await fetch(url);
+  const json = await data.json();
+  const reply = json.filter((item) => Boolean(item.courses)).filter((item) => Boolean(item.open_seats));
+  return reply;
+}
+
 async function mainEvent() {
   const chartTarget = document.querySelector("#myChart");
 
-  const results = await fetch ('https://beta.umd.io/');
-//   convert results to JSON
-  const arrayFromJson = await results.json();
+//   const results = await fetch ('https://beta.umd.io/');
+// //   convert results to JSON
+//   const arrayFromJson = await results.json();
 
   initChart(chartTarget);
 }
