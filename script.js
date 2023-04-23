@@ -26,7 +26,7 @@ function initChart(chart) {
 }
 
 async function getData() {
-  const url = '';
+  const url = 'https://api.umd.io/v1/courses/sections';
   const data = await fetch(url);
   const json = await data.json();
   const reply = json.filter((item) => Boolean(item.courses)).filter((item) => Boolean(item.open_seats));
@@ -41,6 +41,8 @@ async function mainEvent() {
 //   const arrayFromJson = await results.json();
 
   initChart(chartTarget);
+
+  const chartData = await getData();
 }
 
 // the async keyword means we can make API requests
