@@ -11,14 +11,9 @@ async function getData() {
 async function processing_request() {
   const courses = await getData();
 
-  const openSections = [];
-
-  for (const course of courses) {
-    const sections = "https://api.umd.io/v0/courses/${course.course_id}/sections";
-    const sectionData = await fetch(sections);
-    const sectionJson = await sectionData.json();
-
-    const filterSections = sectionJson.filter(item => item.open_seats > 0);
+  const openSections = courses.filter(item => item.open_seats > 0);
+  const sections = openSections.map(item => 'Section ${item.section_id}');
+  const openSections = openSections.map()
 
     openSections.push({
       course_id: course.course_id,
