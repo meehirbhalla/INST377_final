@@ -1,14 +1,15 @@
-function initChart(chart) {
-  const labels = ["January", "February", "March", "April", "May", "June"];
+function initChart(chart, dataObject) {
+  const labels = Object.keys(dataObject);
+  const info = Object.keys(dataObject).map((item) => dataObject[item].length);
 
   const data = {
     labels: labels,
     datasets: [
       {
-        label: "My First dataset",
+        label: "UMD",
         backgroundColor: "rgb(255, 99, 132)",
         borderColor: "rgb(255, 99, 132)",
-        data: [0, 10, 5, 2, 20, 30, 45],
+        data: info,
       },
     ],
   };
@@ -19,31 +20,32 @@ function initChart(chart) {
     options: {},
   };
 
-  return new Chart(
-    chart, 
-    config
-  );
+  return new Chart(chart, config);
 }
 
 async function getData() {
-  const url = 'https://api.umd.io/v1/courses/sections';
+  const url = "https://api.umd.io/v1/courses/sections";
   const data = await fetch(url);
   const json = await data.json();
-  const reply = json.filter((item) => Boolean(item.courses)).filter((item) => Boolean(item.sections));
+  const reply = json
+    .filter((item) => Boolean(item.open_seats));
   return reply;
 }
 
 async function mainEvent() {
   const chartTarget = document.querySelector("#myChart");
 
-//   const results = await fetch ('https://beta.umd.io/');
-// //   convert results to JSON
-//   const arrayFromJson = await results.json();
+  const results = await fetch(
+    "https://api.umd.io/v1/courses/sections"
+  );
 
-  initChart(chartTarget);
-
+  const storedList = await results.json();
+  
   const chartData = await getData();
-  console.log('data', chartData);
+
+  const shapedData = shapeDataForLineChart(chartData);
+  const myChart = initChart(chartTarget, shapedData);
+  
 }
 
 // the async keyword means we can make API requests
