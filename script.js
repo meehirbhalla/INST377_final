@@ -18,21 +18,22 @@ async function processing_request() {
   const chartTarget = document.querySelector("#myChart");
 
   const myChart = new Chart(chartTarget, {
-    type: 'bar',
+    type: "bar",
     data: {
       labels: sections,
-      datasets: [{
-        label: "INST377 Open Seats",
-        backgroundColor: 'rgb(255, 255, 255)',
-        borderColor: 'rgb(255, 255, 255)',
-        data: openSeats
-      }]
+      datasets: [
+        {
+          label: "INST377 Open Seats",
+          backgroundColor: "rgb(66, 66, 66)",
+          borderColor: "rgb(0, 0, 0)",
+          data: openSeats,
+        },
+      ],
     },
-    options: {
-    }
+    options: {},
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   processing_request();
 });
