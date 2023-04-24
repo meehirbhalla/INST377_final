@@ -13,6 +13,8 @@ async function processing_request() {
   const openCourses = [];
 
   for (const course of courses) {
-    
+    const sections = "https://api.umd.io/v0/courses/${course.course_id}/sections";
+    const sectionData = await fetch(sections);
+    const sectionJson = await sectionData.json();
   }
 }
