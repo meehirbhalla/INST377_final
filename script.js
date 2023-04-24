@@ -11,15 +11,7 @@ async function getData() {
 async function processing_request() {
   const courses = await getData();
 
-  const openSections = courses.filter(item => item.open_seats > 0);
-  const sections = openSections.map(item => 'Section ${item.section_id}');
-  const openSections = openSections.map()
-
-    openSections.push({
-      course_id: course.course_id,
-      open_sections: filterSections
-    });
-  }
-  console.log(openSections);
-  return openSections;
+  const openSections = courses.filter((item) => item.open_seats > 0);
+  const sections = openSections.map((item) => "Section ${item.section_id}");
+  const openSeats = openSections.map((item) => item.open_seats);
 }
