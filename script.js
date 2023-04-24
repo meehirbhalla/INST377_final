@@ -35,17 +35,21 @@ async function getData() {
 async function mainEvent() {
   const chartTarget = document.querySelector("#myChart");
 
+  let storedList = [];
+
   const results = await fetch(
     "https://api.umd.io/v1/courses/sections"
   );
 
-  const storedList = await results.json();
+  // storedList = await results.json();
+  // console.table(storedList);
   
-  const chartData = await getData();
+  // const chartData = await getData();
 
-  const shapedData = shapeDataForLineChart(chartData);
-  const myChart = initChart(chartTarget, shapedData);
-  
+  // const shapedData = shapeDataForLineChart(chartData);
+  // const myChart = initChart(chartTarget, shapedData);
+
+  initChart(chartTarget);
 }
 
 // the async keyword means we can make API requests
