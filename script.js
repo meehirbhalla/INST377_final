@@ -17,6 +17,7 @@ async function processing_request() {
 
   const chartTarget = document.querySelector("#myChart");
 
+  // Data visualization using chart.js
   const myChart = new Chart(chartTarget, {
     type: "bar",
     data: {
