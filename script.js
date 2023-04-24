@@ -24,7 +24,7 @@ async function processing_request() {
       datasets: [
         {
           label: "INST377 Open Seats",
-          backgroundColor: "rgb(66, 66, 66)",
+          backgroundColor: "rgb(100, 100, 100)",
           borderColor: "rgb(0, 0, 0)",
           data: openSeats,
         },
