@@ -48,6 +48,11 @@ form {
   color: #000000;
 }
 
+#myChart {
+  width: 800px;
+  height: 400px;
+}
+
 .wrapper {
   min-height: 100vh;
   display: flex;
