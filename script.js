@@ -1,5 +1,5 @@
 // An asynchronous data request to your API
-async function get377Data() {
+async function getData() {
   // target courses
   const courses = ["INST377", "INST362", "INST354"]
   courseData = {}
@@ -31,7 +31,7 @@ async function processing_request() {
       labels: sections,
       datasets: [
         {
-          label: "INST377 Open Seats",
+          label: "Open Seats",
           backgroundColor: "rgb(120, 120, 120)",
           borderColor: "rgb(0, 0, 0)",
           data: openSeats,
