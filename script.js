@@ -1,9 +1,16 @@
 // An asynchronous data request to your API
-async function getData() {
-  const url = "https://api.umd.io/v0/courses/INST377/sections";
-  const data = await fetch(url);
-  const json_data = await data.json();
-  return json_data;
+async function get377Data() {
+  // target courses
+  const courses = ["INST377", "INST362", "INST354"]
+  courseData = {}
+  for (const course of courses) {
+    const url = "https://api.umd.io/v0/courses/${course}/sections";
+    const data = await fetch(url);
+    const json_data = await data.json();
+    // append json data for course into courseData object as a key value pair
+    courseData[course] = json_data;
+  }
+  return courseData;
 }
 
 // A processing request that uses array methods (.map, .filter, .find, .reduce) to change
