@@ -1,12 +1,3 @@
-async function getSectionIDs() {
-  const url = "https://api.umd.io/v0/courses/INST377/sections";
-  const data = await fetch(url);
-  const json_data = await data.json();
-  const sectionIDs = json_data.map((section) => section.section_id);
-  return sectionIDs;
-}
-
-getSectionIDs().then((ids) => console.log(ids));
 // An asynchronous data request to your API
 async function getData() {
   const url = "https://api.umd.io/v0/courses/INST377/sections";
