@@ -8,8 +8,11 @@ async function getData() {
 
 // A processing request that uses array methods (.map, .filter, .find, .reduce) to change
 // your data into the shape your chart, map, or other component needs for display.
-async function processing_request() {
+async function processing_request(selectedSections) {
   const courses = await getData();
+
+  // only display selected sections when using filter checkboxes
+  const filteredSections = openSections.filter((item) => selectedSections.includes(item.section_id));
 
   const openSections = courses.filter((item) => item.open_seats > 0);
   const sections = openSections.map((item) => item.section_id);
