@@ -46,8 +46,10 @@ async function processing_request(selectedSections) {
   });
 }
 
+// query selector for checkboxes
 const filter = document.querySelectorAll('input[type="checkbox"]');
 
+// enabling filtering by checkbox
 filter.forEach((checkbox) => {
   checkbox.addEventListener("change", () => {
     const selectedSections = Array.from(filter)
