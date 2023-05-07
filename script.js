@@ -83,7 +83,7 @@ async function processing_request(selectedSections) {
         datasets: [
           {
             label: "Open Seats",
-            backgroundColor: "rgb(120, 120, 120)",
+            backgroundColor: "rgba(138, 170, 58, 0.7)",
             borderColor: "rgb(0, 0, 0)",
             data: openSeats,
           },
