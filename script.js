@@ -10,7 +10,12 @@ async function getData() {
 // your data into the shape your chart, map, or other component needs for display.
 async function processing_request(selectedSections) {
   const courses = await getData();
-  const openSections = courses.filter((item) => item.open_seats > 0);
+
+  localStorage.setItem('storedData', JSON.stringify(courses))
+
+  const recallCourses = localStorage.getItem('storedData')
+
+  const openSections = recallCourses.filter((item) => item.open_seats > 0);
 
   // only display selected sections when using filter checkboxes
   const filteredSections = selectedSections.length
