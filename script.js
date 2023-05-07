@@ -16,6 +16,7 @@ async function processing_request(selectedSections) {
   const recallCourses = localStorage.getItem('storedData');
 
   // convert back to JSON
+  // recallCourseJSON is saved to the browser
   const recallCourseJSON = JSON.parse(recallCourses);
 
   const openSections = recallCourseJSON.filter((item) => item.open_seats > 0);
