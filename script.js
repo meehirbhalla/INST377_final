@@ -9,6 +9,13 @@ async function getData() {
 // A processing request that uses array methods (.map, .filter, .find, .reduce) to change
 // your data into the shape your chart, map, or other component needs for display.
 async function processing_request(selectedSections) {
+  const refreshDataButton = document.querySelector("#dataRefresh");
+
+  refreshDataButton.addEventListener("click", async (event) => {
+    console.log("new API call");
+    const courses = await getData();
+  })
+
   const courses = await getData();
 
   localStorage.setItem('storedData', JSON.stringify(courses));
