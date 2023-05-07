@@ -11,11 +11,14 @@ async function getData() {
 async function processing_request(selectedSections) {
   const courses = await getData();
 
-  localStorage.setItem('storedData', JSON.stringify(courses))
+  localStorage.setItem('storedData', JSON.stringify(courses));
 
-  const recallCourses = localStorage.getItem('storedData')
+  const recallCourses = localStorage.getItem('storedData');
 
-  const openSections = recallCourses.filter((item) => item.open_seats > 0);
+  // convert back to JSON
+  const recallCourseJSON = JSON.parse(recallCourses);
+
+  const openSections = recallCourseJSON.filter((item) => item.open_seats > 0);
 
   // only display selected sections when using filter checkboxes
   const filteredSections = selectedSections.length
