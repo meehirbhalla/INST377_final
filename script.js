@@ -127,12 +127,16 @@ function queryData() {
   processing_request([]);
 }
 // query selector for refresh button
-document.querySelector("#dataRefresh").addEventListener("click", () => {
-  query = false;
+document.querySelector("#dataRefresh").addEventListener("click", async () => {
+  console.log("localStorage swapped with new data from API.");
   // default refresh item to true
   localStorage.setItem("refresh", true);
   // if clicked remove local storage storedData item
   localStorage.removeItem("storedData");
+  
+  const courses = await getData();
+  localStorage.setItem("storedData", JSON.stringify(courses));
+
   // clear local storage
   localStorage.clear();
   // call processing_request and pass empty array for when no section is selected

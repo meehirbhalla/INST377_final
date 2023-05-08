@@ -123,6 +123,11 @@ form {
   background-color: rgba(138, 170, 58, 0.7);
 }
 
+.hints {
+  font-size: small;
+  font-style: italic;
+}
+
 .box {
   background-color: rgba(175, 215, 74, 0.7);
   border: 2px dashed;
