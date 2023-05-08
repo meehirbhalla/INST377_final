@@ -134,6 +134,7 @@ document.querySelector("#dataRefresh").addEventListener("click", async () => {
   // if clicked remove local storage storedData item
   localStorage.removeItem("storedData");
 
+  // get new data from a new API call
   const courses = await getData();
   localStorage.setItem("storedData", JSON.stringify(courses));
 
