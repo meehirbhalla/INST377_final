@@ -133,7 +133,7 @@ document.querySelector("#dataRefresh").addEventListener("click", async () => {
   localStorage.setItem("refresh", true);
   // if clicked remove local storage storedData item
   localStorage.removeItem("storedData");
-  
+
   const courses = await getData();
   localStorage.setItem("storedData", JSON.stringify(courses));
 
