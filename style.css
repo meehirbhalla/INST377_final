@@ -132,10 +132,6 @@ form {
   font-size: 15px;
 }
 
-.navigation {
-  
-}
-
 .box {
   background-color: rgba(175, 215, 74, 0.7);
   border: 2px dashed;
@@ -196,4 +192,17 @@ form {
   background-color: rgba(66, 66, 66, 0.8);
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+.footer a {
+  color: #ffbf00;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  /* Hue, saturation, luminosity, alpha */
+  background-color: hsla(0, 0%, 90%, 0.15);
+  /* red, green, blue, alpha */
+  color: #ffbf00;
+  text-decoration: none;
 }
