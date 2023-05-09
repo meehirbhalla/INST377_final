@@ -16,48 +16,32 @@
       <header class="header"><h1>UMD Power Query for Testudo</h1></header>
       <div class="container">
         <div class="box left_section">
-
+          <h3>About UMD Power Query</h3>
+          <p>
+            UMD Power Query enables users to view open sections for INST377.
+            Users are able to filter INST377 by section, query for data from
+            umd.io and refresh data to replace locally stored data with fresh
+            data from umd.io!
+          </p>
         </div>
         <div class="box right_section">
-          <div>
-            <canvas id="myChart"></canvas>
-          </div>
-          <h4>Section Filter</h4>
-          <div class="filterData">
-            <label
-              ><input type="checkbox" name="" value="INST377-0101" />0101</label
-            >
-            <label
-              ><input type="checkbox" name="" value="INST377-0102" />0102</label
-            >
-            <label
-              ><input type="checkbox" name="" value="INST377-0105" />0105</label
-            >
-            <label
-              ><input type="checkbox" name="" value="INST377-ESG1" />ESG1</label
-            >
-            <p class="directions">Select a section to display its data.</p>
-            <p></p>
-            <button type="button" id="getData" class="query_button">
-              Query
-            </button>
-            <button type="button" id="dataRefresh" class="refresh_button">
-              Refresh
-            </button>
-            <div class="hints">
-              <p>
-                Click 'Refresh' before clicking 'Query' to clear localStorage.
-              </p>
-              <p>
-                'Refresh' will replace localStorage data with data from a new
-                API call if 'Query' is clicked first.
-              </p>
-            </div>
-          </div>
+          <h3>Quick Start</h3>
+          <p>
+            To use UMD Power Query first click 'Query' to fetch data from the
+            umd.io API for INST377 and its respective sections. Then you can
+            utilize the filters underneath the bar chart to filter the
+            visualization to only display the selected course sections. The
+            'Refresh' button can be used to either clear locally stored data or
+            replace locally stored data with new data from umd.io To clear
+            locally stored data, click 'Refresh' prior to clicking 'Query'. To
+            replace locally stored data with new data from umd.io, click
+            'Refresh' after clicking 'Query'.
+          </p>
         </div>
       </div>
-      <footer class="footer">Meehir Bhalla - INST377 SPR2023
-        <a href="index.html">Home</a>
+      <footer class="footer">
+        Meehir Bhalla - INST377 SPR2023
+        <a href="index.html" class="navigation">Home</a>
       </footer>
     </div>
     <script src="./script.js"></script>
