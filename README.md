@@ -7,7 +7,7 @@
 **Project Description:**
 **API:** https://beta.umd.io/
 
-What visualisations does your project drive?
+What visualisations does your project drive? </br>
 **Visualization:** Bar chart using chart.js (https://www.chartjs.org/)
 
 What CSS frameworks did you use? What version of them?
