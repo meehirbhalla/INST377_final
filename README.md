@@ -2,7 +2,7 @@
 
 **GitHub Pages site:** https://meehirbhalla.github.io/INST377_final/
 
-**Target Browsers:** Chrome, Firefox, Safari, Opera, Edge, Chrome for Android, Safari on IOS
+**Target Browsers:** Chrome, Firefox, Safari, Opera, Edge, Chrome for Android, Safari on IOS - *(All latest versions)*
 
 **Project Description:** </br>
 **API:** https://beta.umd.io/
