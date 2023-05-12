@@ -5,7 +5,8 @@
 **Target Browsers:** Chrome, Firefox, Safari, Opera, Edge, Chrome for Android, Safari on IOS - *(All latest versions)*
 
 **Project Description:** </br>
-**API:** https://beta.umd.io/
+**API:** UMD Power Query for Testudo utilizes the umd.io API. This API provides information regarding courses at UMD, such as course name, course sections, open seats, etc.
+**Link to API:** https://beta.umd.io/
 
 **What visualisations does your project drive?** </br>
 UMD PowerBar chart using chart.js (https://www.chartjs.org/). This bar chart displays the number of open seats in each section of INST377. Users can also filter the sections displayed using checboxes.
