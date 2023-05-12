@@ -5,11 +5,10 @@
 **Target browsers:** Google Chrome, Firefox 
 
 **Project Description:** </br>
------------------------ </br>
 **API:** https://beta.umd.io/
 
 **What visualisations does your project drive?** </br>
-UMD PowerBar chart using chart.js (https://www.chartjs.org/)
+UMD PowerBar chart using chart.js (https://www.chartjs.org/). This bar chart displays the number of open seats in each section of INST377. Users can also filter the sections displayed using checboxes.
 
 What CSS frameworks did you use? What version of them? </br>
 **CSS frameworks:**
