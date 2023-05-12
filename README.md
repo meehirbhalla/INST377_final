@@ -11,7 +11,7 @@
 **What visualisations does your project drive?** </br>
 UMD Power Query for Testudo leverages a bar chart using chart.js (https://www.chartjs.org/). This bar chart displays the number of open seats in each section of INST377. Users can filter the sections displayed using checkboxes.
 
-What CSS frameworks did you use? What version of them? </br>
+**What CSS frameworks did you use? What version of them?** </br>
 **CSS frameworks:** Contemporary CSS (CSS3)
 
 **What is your actual project trying to display and solve?** </br>
