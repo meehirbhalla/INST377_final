@@ -5,6 +5,7 @@
 **Target browsers:** Google Chrome, Firefox 
 
 **Project Description:** </br>
+----------------------- </br>
 **API:** https://beta.umd.io/
 
 **What visualisations does your project drive?** </br>
