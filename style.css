@@ -161,35 +161,6 @@ form {
   align-items: center;
 }
 
-.viz {
-  width: 48%;
-  height: 200px;
-  margin: 4px;
-  border: 1px solid rgb(122, 122, 122);
-  float: left;
-  border-radius: 5px;
-  background-color: rgba(175, 237, 50, 0.416);
-}
-
-.open_seats {
-  width: fit-content;
-  height: 25px;
-  margin: 4px;
-  float: left;
-}
-
-.empty {
-  background-color: rgba(175, 215, 74, 0.7);
-}
-
-.half {
-  background-color: rgb(255, 132, 0, 0.7);
-}
-
-.full {
-  background-color: rgb(255, 0, 0, 0.7);
-}
-
 .footer {
   flex-shrink: 0;
   padding: 1rem;
@@ -209,4 +180,34 @@ form {
   /* red, green, blue, alpha */
   color: #ffbf00;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 650px) {
+  /* Rules in here will only apply when a screen is the correct size */
+  /* check it out by using your developer tools to shrink your screen-size */
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right_section {
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left_section {
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .box {
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    justify-content: flex-start;
+  }
 }
