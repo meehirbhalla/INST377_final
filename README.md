@@ -5,7 +5,7 @@
 **Target Browsers:** Chrome, Firefox, Safari, Opera, Edge, Chrome for Android, Safari on IOS - *(All latest versions)*
 
 **Project Description:** </br>
-**API:** UMD Power Query for Testudo utilizes the umd.io API. This API provides information regarding courses at UMD, such as course name, course sections, open seats, etc.
+**API:** UMD Power Query for Testudo utilizes the umd.io API. This API provides information regarding courses at UMD, such as course name, course sections, open seats, etc. </br>
 **Link to API:** https://beta.umd.io/
 
 **What visualisations does your project drive?** </br>
